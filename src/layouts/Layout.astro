@@ -1,0 +1,137 @@
+---
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Bogdan Malizhev, a Technical Lead and a Full stack developer"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title || "Bogdan Malizhev"}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>
+<style is:global lang="scss">
+  :root {
+    --color-background: #f5f5f5;
+    --color-text: #13151a;
+    --color-code: #e9ecef;
+    --color-border: #ced4da;
+    --color-link: #1971c2;
+
+    @media (prefers-color-scheme: dark) {
+      --color-background: #13151a;
+      --color-text: #fff;
+      --color-code: #212529;
+      --color-border: #343a40;
+      --color-link: #74c0fc;
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+    background: var(--color-background);
+    color: var(--color-text);
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :where(img, picture, video, canvas, svg) {
+    display: block;
+    max-width: 100%;
+  }
+
+  :where(input, button, textarea, select) {
+    font: inherit;
+  }
+
+  :where(p, h1, h2, h3, h4, h5, h6) {
+    overflow-wrap: break-word;
+  }
+
+  :where(a) {
+    color: var(--color-link);
+  }
+
+  :where(p) {
+    margin: 1rem 0;
+  }
+
+  :where(ul) {
+    margin: 1rem 0;
+    padding-inline-start: 1rem;
+
+    li + li {
+      margin-block-start: 0.5rem;
+    }
+  }
+
+  :where(hr) {
+    height: 1px;
+    margin: 2rem 0;
+    border: 0;
+    background: var(--color-border);
+  }
+
+  :where(code) {
+    padding: 0.25rem;
+    outline: 1px solid var(--color-border);
+    border-radius: 4px;
+    font: inherit;
+    background-color: var(--color-code);
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    max-width: 70ch;
+    margin: 0 auto;
+    padding: clamp(1rem, 8vw, 5rem) 1rem 1rem;
+  }
+</style>

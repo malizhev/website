@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="container">
+    <main class="content">
+      <p>
+        Hi 👋 <br />
+         My name's <strong>Bogdan Malizhev</strong>
+        <br />
+        <span class="aka">(aka Bohdan Malyzhev, укр. Богдан Малижев)</span>, <br
+        />
+         and I'm a Technical Lead and a Full stack developer.
+      </p>
+      <p>
+        For more than <strong>10 years</strong> of my career, I've worked with
+        companies such as <a href="https://www.tietoevry.com/">TietoEvry</a>, <a
+          href="https://www.gjensidige.no/">Gjensidige</a
+        >, <a href="https://www.infopulse.com/">Infopulse</a>, <a
+          href="https://elop.no/">Elop</a
+        >, and <a href="https://cloutly.com/">Cloutly</a>.
+      </p>
+      <p>
+        <strong
+          >Currently, I work as a Frontend Technical Lead at <a
+            href="https://www.simplifai.ai/">Simplifai</a
+          >.</strong
+        >
+      </p>
+      <hr />
+      <p>My expertise includes:</p>
+      <ul>
+        <li>
+          the core Web technologies (<code>HTML</code>, <code>CSS</code>, <code
+            >JavaScript</code
+          >, <code>TypeScript</code>);
+        </li>
+        <li>
+          majority of the popular frameworks, such as
+          <code>React</code>, <code>Angular</code>, <code>Solid</code>, <code
+            >Vue</code
+          >, and <code>Svelte</code>;
+        </li>
+        <li>
+          building backend APIs using
+          <code> Node.js</code> (<code>Express</code>, <code>Fastify</code>, <code
+            >Nest.js</code
+          >) and <code>.NET Core</code>
+        </li>
+        <li>
+          mobile app development using <code>Capacitor</code>, <code
+            >Flutter</code
+          >, and <code>Swift UI</code>
+        </li>
+      </ul>
+      <hr />
+      <p>
+        After hours, I play guitar with <a
+          href="https://tom-hat.fanlink.to/tom-hat">Tom Hat</a
+        > and work on <a href="https://artsense.me">ArtSense</a>, a platform for
+        digital artists.
+      </p>
+    </main>
+    <p class="comment" aria-hidden="true">// TODO: design in progress</p>
+  </div>
+</Layout>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-areas:
+      "comment"
+      "main";
+  }
+
+  .comment {
+    grid-area: comment;
+    margin: 0;
+    color: #6a9955;
+  }
+
+  .aka {
+    opacity: 0.5;
+  }
+</style>
