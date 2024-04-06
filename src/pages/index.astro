@@ -1,5 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+function calculateExperienceInYears() {
+  const careerStartDate = new Date("2012-10-01");
+  const dateDiffInMilliseconds = Date.now() - careerStartDate.valueOf();
+  return Math.abs(new Date(dateDiffInMilliseconds).getUTCFullYear() - 1970);
+}
 ---
 
 <Layout>
@@ -7,19 +13,21 @@ import Layout from "../layouts/Layout.astro";
     <main class="content">
       <p>
         Hi 👋 <br />
-         My name's <strong>Bogdan Malizhev</strong>
+        My name's <strong>Bogdan Malizhev</strong>
         <br />
         <span class="aka">(aka Bohdan Malyzhev, укр. Богдан Малижев)</span>, <br
         />
-         and I'm a Technical Lead and a Full stack developer.
+        and I'm a Technical Lead and a Full stack developer.
       </p>
       <p>
-        For more than <strong>10 years</strong> of my career, I've worked with
-        companies such as <a href="https://www.tietoevry.com/">TietoEvry</a>, <a
-          href="https://www.gjensidige.no/">Gjensidige</a
-        >, <a href="https://www.infopulse.com/">Infopulse</a>, <a
-          href="https://elop.no/">Elop</a
-        >, and <a href="https://cloutly.com/">Cloutly</a>.
+        For more than <strong>{calculateExperienceInYears()} years</strong> of my
+        career, I've worked with companies such as <a
+          href="https://www.tietoevry.com/">TietoEvry</a
+        >, <a href="https://www.gjensidige.no/">Gjensidige</a>, <a
+          href="https://www.infopulse.com/">Infopulse</a
+        >, <a href="https://elop.no/">Elop</a>, and <a
+          href="https://cloutly.com/">Cloutly</a
+        >.
       </p>
       <p>
         <strong
@@ -57,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
       <hr />
       <p>
         After hours, I play guitar with <a
-          href="https://tom-hat.fanlink.to/tom-hat">Tom Hat</a
+          href="https://www.youtube.com/@tomhat6559">Tom Hat</a
         > and work on <a href="https://artsense.me">ArtSense</a>, a platform for
         digital artists.
       </p>
