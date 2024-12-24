@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 120" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" aria-hidden="true">
+  <g>
+    <path d="M97.5,4.5l-0,111c-0,2.484 -2.016,4.5 -4.5,4.5l-88.5,0c-2.484,0 -4.5,-2.016 -4.5,-4.5l-0,-111c-0,-2.484 2.016,-4.5 4.5,-4.5l88.5,0c2.484,0 4.5,2.016 4.5,4.5Z" style="fill:#f79051;fill-opacity:0.1;" />
+    <g>
+      <rect x="22.5" y="22.5" width="33.75" height="15" style="fill:#f79051;" />
+      <rect x="56.25" y="37.5" width="15" height="15" style="fill:#f79051;" />
+      <rect x="56.25" y="67.5" width="15" height="30" style="fill:#f79051;" />
+      <rect x="37.5" y="52.5" width="18.75" height="15" style="fill:#f79051;" />
+      <path d="M56.25,22.5l15,15l-15,0l0,-15Z" style="fill:#f79051;fill-opacity:0.5;" />
+      <path d="M56.25,52.5l15,15l-15,0l0,-15Z" style="fill:#f79051;fill-opacity:0.5;" />
+    </g>
+    <rect x="22.5" y="82.5" width="15" height="15" style="fill:#f79051;fill-opacity:0.5;" />
+  </g>
+</svg>
